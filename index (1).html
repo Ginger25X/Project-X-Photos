@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos X Chris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#"><img src="img/Logo teste.png" alt="Logo do Site"></a></li> <!-- Adicione sua logo aqui -->
+                <li><button class="botao-carrinho" onclick="abrirCarrinho()">Meu Carrinho</button></li> <!-- Alterado para botão -->
+                <li>
+                    <a href="https://www.instagram.com/chrisx_25/profilecard/?igsh=a3BoM2NtdDJkdml4" target="_blank">
+                        <img src="img/InstaLogo.png" alt="Imagem do Link" class="header-img">
+                    </a>
+                </li> <!-- Nova imagem à direita -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background-container">
+        <video autoplay muted loop>
+            <source src="img/Background Site.mp4" type="video/mp4" id="BackgroundVideo">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <div class="overlay"></div>
+        <main>
+            <section class="tela-inicial">
+                <h2>Photos X Chris</h2>
+                <p><strong>A ARTE DE REGISTRAR!</strong></p> <!-- Apenas texto em negrito, sem link -->
+                <button id="comprar-button" onclick="window.location.href='pagina_de_compras.html'">Adquirir Fotos</button>
+            </section>
+        </main>
+    </div>
+
+    <section class="exemplos-fotos">
+        <h2>Exemplos de Trabalhos</h2>
+        <div class="exemplo">
+            <img src="img/Fire Moon.JPG" alt="Exemplo de Foto 1">
+            <h3>Lua de Fogo</h3>
+            <p>Descrição breve sobre a foto 1. Explicação sobre o contexto ou o estilo da imagem.</p>
+        </div>
+        <div class="exemplo">
+            <img src="img/Odie Meu Cachorro.JPG" alt="Exemplo de Foto 2">
+            <h3>O Destemido</h3>
+            <p>Descrição breve sobre a foto 2. Explicação sobre o contexto ou o estilo da imagem.</p>
+        </div>
+        <div class="exemplo">
+            <img src="img/Lua Radiante.JPG" alt="Exemplo de Foto 3">
+            <h3>Lua Radiante</h3>
+            <p>Descrição breve sobre a foto 3. Explicação sobre o contexto ou o estilo da imagem.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Photos X Chris</p>
+    </footer>
+
+    <!-- Modal do Carrinho -->
+    <div id="carrinho-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharCarrinho()">×</span>
+            <h2>Carrinho de Compras</h2>
+            <div id="carrinho-itens">
+                <!-- Itens do carrinho serão inseridos aqui pelo JavaScript -->
+            </div>
+            <div id="carrinho-total">
+                <!-- Total do carrinho será inserido aqui pelo JavaScript -->
+            </div>
+            <button id="limpar-carrinho" onclick="limparCarrinho()">Limpar Carrinho</button>
+            <button id="confirmar-compra">Confirmar Compra</button>
+        </div>
+    </div>
+
+    <!-- Mensagem de Confirmação -->
+    <div id="mensagem-confirmacao" class="mensagem-confirmacao">
+        Foto adicionada ao carrinho!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

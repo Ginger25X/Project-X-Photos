@@ -1,0 +1,281 @@
+body { 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    height: 100%;
+    padding-top: 80px; /* Ajuste esse valor conforme necessário */
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(105, 0, 0)); /* Cor sólida sem transparência */
+    color: #fff;
+    padding: 0.5rem; /* Diminui a altura do cabeçalho */
+    text-align: center;
+    border-bottom: 2px solid white;
+    background: linear-gradient(to right, rgb(20, 0, 0), rgb(150, 0, 0));
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Alinha os itens em linha */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+nav ul li {
+    margin-right: 1rem; /* Espaçamento entre os itens */
+    position: relative; /* Necessário para posicionar a tooltip corretamente */
+}
+
+header img {
+    height: 50px; /* Defina a altura da logo */
+    margin-right: 1rem; /* Espaço entre a logo e os itens do menu */
+}
+
+.header-img {
+    height: 50px; /* Ajuste a altura conforme necessário */
+    margin-left: 20px; /* Espaçamento à esquerda, se necessário */
+}
+
+.background-container {
+    position: relative; /* Para permitir o overlay */
+    height: 100vh; /* Altura para ocupar toda a tela inicial */
+    overflow: hidden; /* Garante que o vídeo não transborde */
+}
+
+.background-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra todo o background */
+    z-index: -1; /* Coloca o vídeo abaixo de todo o conteúdo */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/bg-overlay.png'); /* Caminho para o arquivo do overlay */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Overlay fica acima do vídeo */
+}
+
+main {
+    padding: 2rem;
+    position: relative; /* Para que o z-index funcione */
+    z-index: 2; /* Mantém acima do overlay */
+}
+
+footer {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Diminuindo o padding */
+    font-size: 0.8rem; /* Diminuindo o tamanho da fonte */
+    position: relative; /* Para que o footer fique acima do overlay */
+    z-index: 10; /* Aumente o z-index do footer */
+    width: 100%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mensagem-confirmacao {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ffa600;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#limpar-carrinho {
+    background-color: #7c1300;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#limpar-carrinho:hover {
+    background-color: #252525;
+}
+
+/* Estilo para os botões do carrinho */
+#limpar-carrinho, #confirmar-compra {
+    background-color: #7c1300; /* Cor inicial para ambos os botões */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Suaviza a transição de cor */
+}
+
+#confirmar-compra {
+    background-color: #ff0000; /* Cor para o botão de confirmar compra */
+}
+
+#limpar-carrinho:hover, #confirmar-compra:hover {
+    background-color: rgb(233, 151, 0); /* Cor ao passar o mouse para ambos os botões */
+}
+
+.tela-inicial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: flex-start; /* Alinha à esquerda */
+    height: 50vh; /* Altura para ocupar toda a tela inicial */
+    padding: 2rem; /* Adiciona um pouco de espaço */
+    color: white; /* Muda a cor do texto para branco */
+}
+
+.tela-inicial h2 {
+    font-size: 3.5rem; /* Aumenta o tamanho da fonte */
+    margin: 0; /* Remove margens */
+}
+
+.tela-inicial p {
+    font-size: 1.3rem; /* Aumenta o tamanho do texto do parágrafo */
+}
+
+#comprar-button {
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    right: 70px; /* Distância do lado direito */
+    bottom: 115px; /* Distância do fundo */
+    background: linear-gradient(to right, rgb(105, 0, 0), rgb(20, 0, 0)); /* Gradiente inicial */
+    color: white;
+    padding: 30px 80px; /* Aumenta o tamanho do botão */
+    border: 2px solid rgb(149, 149, 149); /* Adiciona borda branca */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px; /* Aumenta o tamanho da fonte */
+    transition: background 0.3s ease; /* Suaviza a transição de cor */
+}
+
+#comprar-button:hover {
+    background: linear-gradient(to right, rgb(105, 0, 0), rgb(20, 0, 0)); /* Gradiente ao passar o mouse */
+    animation: piscar-borda 1s infinite; /* Animação de piscar na borda */
+}
+
+/* Animação de piscar na borda */
+@keyframes piscar-borda {
+    0%, 100% { border-color: rgb(139, 139, 139); } /* Mantém a borda branca no início e no final */
+    50% { border-color: rgb(255, 255, 255); } /* Borda com opacidade reduzida */
+}
+
+/* Seção de exemplos de fotos */
+.exemplos-fotos {
+    padding: 4rem 2rem;
+    background-color: #270000; /* Fundo escuro para contraste */
+    color: #fff;
+    text-align: center;
+}
+
+.exemplos-fotos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.exemplo {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    text-align: center;
+}
+
+.exemplo img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.exemplo h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.exemplo p {
+    font-size: 1rem;
+    color: #ccc; /* Cor mais clara para o texto da descrição */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .exemplo {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Estilo para o botão "Meu Carrinho" */
+.botao-carrinho {
+    background-color: #7c1300;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.botao-carrinho:hover {
+    background-color: rgb(80, 0, 0);
+}
