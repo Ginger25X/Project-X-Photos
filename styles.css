@@ -83,140 +83,59 @@ main {
 }
 
 footer {
-    background-color: transparent;
-    color: white;
-    text-align: center;
-    padding: 20px; /* Diminuindo o padding */
-    font-size: 0.8rem; /* Diminuindo o tamanho da fonte */
-    position: relative; /* Para que o footer fique acima do overlay */
-    z-index: 10; /* Aumente o z-index do footer */
-    width: 100%;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.mensagem-confirmacao {
-    display: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #ffa600;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1000;
-}
-
-#limpar-carrinho {
-    background-color: #7c1300;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-#limpar-carrinho:hover {
-    background-color: #252525;
-}
-
-/* Estilo para os botões do carrinho */
-#limpar-carrinho, #confirmar-compra {
-    background-color: #7c1300; /* Cor inicial para ambos os botões */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease; /* Suaviza a transição de cor */
-}
-
-#confirmar-compra {
-    background-color: #ff0000; /* Cor para o botão de confirmar compra */
-}
-
-#limpar-carrinho:hover, #confirmar-compra:hover {
-    background-color: rgb(233, 151, 0); /* Cor ao passar o mouse para ambos os botões */
+    position: fixed; /* Mantém o footer fixo na tela */
+    bottom: 0; /* Posiciona o footer na parte inferior da tela */
+    left: 0; /* Alinha o footer à esquerda */
+    width: 100%; /* Largura total da tela */
+    background-color: transparent; /* Fundo transparente */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento ao redor do texto */
+    font-size: 0.8rem; /* Tamanho da fonte */
+    z-index: 10; /* Mantém o footer acima de outros conteúdos */
 }
 
 .tela-inicial {
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: flex-start; /* Alinha à esquerda */
-    height: 50vh; /* Altura para ocupar toda a tela inicial */
-    padding: 2rem; /* Adiciona um pouco de espaço */
-    color: white; /* Muda a cor do texto para branco */
+    flex-direction: column; /* Organiza a imagem e o texto em coluna */
+    align-items: flex-start; /* Alinha a imagem e o texto à esquerda */
+    justify-content: center; /* Centraliza verticalmente na tela */
+    height: 50vh; /* Altura da tela inicial */
+    padding: 2rem; /* Espaçamento ao redor */
+    color: white;
 }
 
-.tela-inicial h2 {
-    font-size: 3.5rem; /* Aumenta o tamanho da fonte */
-    margin: 0; /* Remove margens */
-}
-
-.tela-inicial p {
-    font-size: 1.3rem; /* Aumenta o tamanho do texto do parágrafo */
+.tela-inicial img {
+    width: 420px; /* Define a largura da imagem */
+    height: auto; /* Mantém as proporções da imagem */
+    margin-bottom: 0.5rem; /* Espaçamento entre a imagem e o texto */
 }
 
 #comprar-button {
-    position: absolute; /* Posiciona o botão de forma absoluta */
-    right: 70px; /* Distância do lado direito */
-    bottom: 115px; /* Distância do fundo */
     background: linear-gradient(to right, rgb(105, 0, 0), rgb(20, 0, 0)); /* Gradiente inicial */
     color: white;
-    padding: 30px 80px; /* Aumenta o tamanho do botão */
-    border: 2px solid rgb(149, 149, 149); /* Adiciona borda branca */
-    border-radius: 5px;
+    padding: 30px 40px; /* Tamanho do botão */
+    border: 3px solid rgb(255, 255, 255); /* Borda inicial */
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 30px; /* Aumenta o tamanho da fonte */
-    transition: background 0.3s ease; /* Suaviza a transição de cor */
+    font-size: 30px; /* Tamanho da fonte do botão */
+    transition: background 0.3s ease;
+    margin-top: 1rem; /* Espaçamento entre o texto e o botão */
+    position: relative;
+    left: 68px;
 }
 
 #comprar-button:hover {
     background: linear-gradient(to right, rgb(105, 0, 0), rgb(20, 0, 0)); /* Gradiente ao passar o mouse */
-    animation: piscar-borda 1s infinite; /* Animação de piscar na borda */
+    animation: piscar-borda 1s infinite; /* Animação de piscar ao passar o mouse */
 }
 
 /* Animação de piscar na borda */
 @keyframes piscar-borda {
-    0%, 100% { border-color: rgb(139, 139, 139); } /* Mantém a borda branca no início e no final */
-    50% { border-color: rgb(255, 255, 255); } /* Borda com opacidade reduzida */
+    0%, 100% { border-color: rgb(255, 196, 0); } /* Borda na cor inicial no começo e fim */
+    50% { border-color: rgb(255, 255, 255); } /* Cor da borda "piscando" no meio */
 }
+
 
 /* Seção de exemplos de fotos */
 .exemplos-fotos {
@@ -272,10 +191,11 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     text-align: center;
 }
 
 .botao-carrinho:hover {
-    background-color: rgb(80, 0, 0);
+    background-color: rgb(255, 196, 0);
+    color: black;
 }

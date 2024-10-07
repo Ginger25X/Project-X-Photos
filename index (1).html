@@ -10,7 +10,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#"><img src="img/Logo teste.png" alt="Logo do Site"></a></li> <!-- Adicione sua logo aqui -->
+                <li><a href="#"><img src="img/PCHR-Logo.png" alt="Logo do Site"></a></li> <!-- Adicione sua logo aqui -->
                 <li><button class="botao-carrinho" onclick="abrirCarrinho()">Meu Carrinho</button></li> <!-- Alterado para botão -->
                 <li>
                     <a href="https://www.instagram.com/chrisx_25/profilecard/?igsh=a3BoM2NtdDJkdml4" target="_blank">
@@ -29,8 +29,7 @@
         <div class="overlay"></div>
         <main>
             <section class="tela-inicial">
-                <h2>Photos X Chris</h2>
-                <p><strong>A ARTE DE REGISTRAR!</strong></p> <!-- Apenas texto em negrito, sem link -->
+                <img src="img/PCHR-Logo.png" alt="Logo Inicial" class="logo-inicial"> 
                 <button id="comprar-button" onclick="window.location.href='pagina_de_compras.html'">Adquirir Fotos</button>
             </section>
         </main>
@@ -59,27 +58,5 @@
         <p>© 2024 Photos X Chris</p>
     </footer>
 
-    <!-- Modal do Carrinho -->
-    <div id="carrinho-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="fecharCarrinho()">×</span>
-            <h2>Carrinho de Compras</h2>
-            <div id="carrinho-itens">
-                <!-- Itens do carrinho serão inseridos aqui pelo JavaScript -->
-            </div>
-            <div id="carrinho-total">
-                <!-- Total do carrinho será inserido aqui pelo JavaScript -->
-            </div>
-            <button id="limpar-carrinho" onclick="limparCarrinho()">Limpar Carrinho</button>
-            <button id="confirmar-compra">Confirmar Compra</button>
-        </div>
-    </div>
-
-    <!-- Mensagem de Confirmação -->
-    <div id="mensagem-confirmacao" class="mensagem-confirmacao">
-        Foto adicionada ao carrinho!
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
