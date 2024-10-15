@@ -1,0 +1,98 @@
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0; /* Remove o padding padrão do body */
+}
+
+header {
+    width: 100%; /* O cabeçalho ocupa toda a largura da tela */
+    height: 50px; /* Defina a altura do cabeçalho */
+    display: flex; /* Permite que o conteúdo seja flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    position: fixed; /* Mantém o cabeçalho fixo na parte superior */
+    top: 0; /* Alinha o cabeçalho ao topo da página */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    background: linear-gradient(to right, rgb(20, 0, 0), rgb(150, 0, 0)); /* Cor do fundo do cabeçalho */
+    z-index: 10; /* Coloca o cabeçalho acima do conteúdo */
+    padding: 0 20px; /* Adiciona um espaçamento lateral ao cabeçalho */
+}
+
+header .voltar-home {
+    position: absolute; /* Permite que o botão seja posicionado fora do fluxo normal */
+    left: 20px; /* Distância do lado esquerdo */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Corrige o alinhamento vertical */
+}
+
+.galeria-produtos {
+    display: flex;
+    flex-direction: column; /* Muda para coluna para alinhar os produtos verticalmente */
+    padding: 1rem; /* Ajuste a largura do padding se necessário */
+    background-color: #270000; /* Fundo da galeria */
+    text-align: center; /* Centraliza o texto dos produtos */
+    height: calc(100vh - 50px); /* Altura da galeria ajustada para a altura total da tela menos a altura do cabeçalho */
+    overflow-y: auto; /* Permite rolagem interna, se necessário */
+    margin-top: 50px; /* Adiciona espaço no topo para evitar que o conteúdo fique atrás do cabeçalho */
+}
+
+.produto {
+    display: flex; /* Mantém a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #1a1a1a; /* Cor de fundo do produto */
+    color: white; /* Cor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin: 1rem 0; /* Margem vertical entre produtos */
+    padding: 1rem; /* Preenchimento interno do produto */
+    border: 2px solid rgb(255, 196, 0); /* Borda do produto */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.produto img {
+    max-width: 100px; /* Ajuste o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 1rem; /* Espaçamento entre a imagem e o texto */
+}
+
+.voltar-home {
+    display: flex; /* Flexbox para alinhamento */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 0; /* Remova a margem superior para alinhar com o cabeçalho */
+}
+
+.voltar-home button {
+    background-color: #7c1300; /* Cor de fundo escura */
+    color: white; /* Texto branco */
+    padding: 10px 20px; /* Preenchimento do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.voltar-home button:hover {
+    background-color: rgb(255, 196, 0); /* Cor mais clara ao passar o mouse */
+    color: black;
+}
+
+/* produtos.css */
+.botao-adicionar {
+    background-color: #006417; /* Verde padrão para o botão */
+    color: white; /* Texto branco */
+    padding: 10px 15px; /* Preenchimento do botão */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    margin-left: auto; /* Alinha o botão à direita do produto */
+}
+
+.botao-adicionar:hover {
+    background-color: #02bb2a; /* Verde escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o botão ao passar o mouse */
+}
+
+.botao-adicionar:focus {
+    outline: none; /* Remove a borda de foco padrão */
+}

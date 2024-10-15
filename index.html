@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos X Chris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#"><img src="img/PCHR-Logo.png" alt="Logo do Site"></a></li> <!-- Adicione sua logo aqui -->
+                <a href="carrinho.html" class="botao-carrinho">Meu Carrinho</a>
+                    <a href="https://www.instagram.com/chrisx_25/profilecard/?igsh=a3BoM2NtdDJkdml4" target="_blank">
+                        <img src="img/InstaLogo.png" alt="Imagem do Link" class="header-img">
+                    </a>
+                </li> <!-- Nova imagem à direita -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background-container">
+        <video autoplay muted loop>
+            <source src="img/Background Site.mp4" type="video/mp4" id="BackgroundVideo">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <div class="overlay"></div>
+        <main>
+            <section class="tela-inicial">
+                <img src="img/PCHR-Logo.png" alt="Logo Inicial" class="logo-inicial"> 
+                <button id="comprar-button" onclick="window.location.href='produtos.html'">Adquirir Fotos</button>
+            </section>
+        </main>
+    </div>
+
+    <section class="exemplos-fotos">
+        <h2>Exemplos de Fotos</h2>
+        <div class="exemplo">
+            <img src="img/Fire Moon.JPG" alt="Exemplo de Foto 1">
+            <h3>Lua de Fogo</h3>
+            <p>A noite também pode ser quente.</p>
+        </div>
+        <div class="exemplo">
+            <img src="img/Odie Meu Cachorro.JPG" alt="Exemplo de Foto 2">
+            <h3>O Destemido</h3>
+            <p>Valentia e determinação definem a busca por seus objetivos.</p>
+        </div>
+        <div class="exemplo">
+            <img src="img/O Final.jpg" alt="Exemplo de Foto 3">
+            <h3>Lua Radiante</h3>
+            <p>O fim do dia é o sinal de um novo dia.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Photos X Chris</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* carrinho.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #270000; /* Fundo escuro */
+}
+
+header {
+    position: fixed; /* Mantém o cabeçalho fixo no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(to right, rgb(20, 0, 0), rgb(150, 0, 0));
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Espaço entre o botão e o título */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px; /* Adiciona um pouco de espaço ao redor do cabeçalho */
+}
+
+header h1 {
+    text-align: right; /* Centraliza o texto do título */
+    padding-right: 50px;
+    flex: 1; /* Faz o título ocupar o espaço disponível */
+    margin: 0; /* Remove margens padrão do título */
+}
+
+#voltar-button {
+    margin-right: 20px; /* Adiciona espaço à direita do botão voltar */
+}
+
+.voltar-button {
+    background-color: #7c1300; /* Fundo transparente */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+.voltar-button:hover {
+    background-color: #ffc107;
+    color: black;
+}
+
+/* Estilo da seção do carrinho */
+.secao-carrinho {
+    padding: 80px 2rem; /* Espaçamento superior para evitar sobreposição com o cabeçalho */
+    margin: 20px; /* Margem ao redor da seção */
+    text-align: center; /* Centraliza o texto */
+}
+
+.item-carrinho {
+    background-color: #1a1a1a; /* Fundo escuro para os itens do carrinho */
+    color: white;
+    margin: 1rem 0; /* Margem entre os itens */
+    padding: 1rem; /* Espaçamento interno */
+    border: 2px solid white; /* Borda dos itens */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.item-carrinho button {
+    background-color: #ff0000; /* Cor do botão de remover */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem; /* Espaçamento acima do botão */
+}
+
+.item-carrinho button:hover {
+    background-color: #d40000; /* Cor do botão ao passar o mouse */
+}
+
+footer {
+    position: fixed; /* Mantém o footer fixo na tela */
+    bottom: 0; /* Posiciona o footer na parte inferior da tela */
+    left: 0; /* Alinha o footer à esquerda */
+    width: 100%; /* Largura total da tela */
+    background-color: transparent; /* Fundo transparente */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento ao redor do texto */
+    font-size: 0.8rem; /* Tamanho da fonte */
+}
+
+/* Estilo para o botão Remover */
+.botao-remover {
+    padding: 10px 15px;
+    margin-left: 10px; /* Para espaço entre os botões */
+    background-color: #7c1300; /* Cor vermelha */
+    color: white; /* Texto branco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao-remover:hover {
+    background-color: #a81a01; /* Cor um pouco mais clara ao passar o mouse */
+}
+
+/* Estilo para o botão Comprar */
+.botao-comprar {
+    padding: 10px 15px;
+    margin-left: 10px; /* Para espaço entre os botões */
+    background-color: #006317; /* Cor verde */
+    color: white; /* Texto branco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao-comprar:hover {
+    background-color: #00a824; /* Cor um pouco mais clara ao passar o mouse */
+}
+
+/* Estilo para o botão Limpar Carrinho */
+button {
+    padding: 10px 15px;
+    background-color: #ffc107; /* Cor amarela */
+    color: black; /* Texto branco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8f6b00; /* Cor um pouco mais escura ao passar o mouse */
+}

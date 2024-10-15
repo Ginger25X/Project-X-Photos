@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Photos X Chris</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Estilos gerais -->
+    <link rel="stylesheet" href="produtos.css"> <!-- Estilos específicos -->
+</head>
+<body>
+    <header>
+        <div class="voltar-home">
+            <button onclick="window.location.href='index.html'">Voltar à Tela Inicial</button>
+        </div>
+        <h1>Galeria de Produtos</h1>
+    </header>
+
+    <section class="galeria-produtos">
+        <div class="produto">
+            <img src="img/Por do Sol Londrinense.jpg" alt="Lua de Fogo" class="produto-imagem">
+            <div class="produto-info">
+                <h3>Pôr do Sol Londrinense</h3>
+                <p>Nas margens do Lago Igapó, o Sol nos ilumina.</p>
+                <p>Preço: R$ 39,99</p>
+                <button class="botao-adicionar" data-nome="Pôr do Sol Londrinense" data-preco="39,99">Adicionar ao Carrinho</button>
+
+            </div>
+        </div>
+        <div class="produto">
+            <img src="img/Flores e Amores.jpg" alt="O Destemido" class="produto-imagem">
+            <div class="produto-info">
+                <h3>Flores e Amores</h3>
+                <p>O cheiro das flores e beleza do campo.</p>
+                <p>Preço: R$ 19,99</p>
+                <button class="botao-adicionar" data-nome="Flores e Amores" data-preco="19.99">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="produto">
+            <img src="img/Lua Radiante.JPG" alt="Lua Radiante" class="produto-imagem">
+            <div class="produto-info">
+                <h3>Lua Radiante</h3>
+                <p>O frescor da noite é brilhante.</p>
+                <p>Preço: R$ 29,99</p>
+                <button class="botao-adicionar" data-nome="Lua Radiante" data-preco="29.99">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+    <script src="produtos.js"></script>
+
+    <footer>
+        <p>© 2024 Photos X Chris</p>
+    </footer>
+</body>
+</html>
